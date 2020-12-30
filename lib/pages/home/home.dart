@@ -7,14 +7,12 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:treecome/widgets/HomeView.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'dart:math';
-import 'package:simple_animations/simple_animations.dart';
 import 'package:supercharged/supercharged.dart';
-import "package:charcode/html_entity.dart";
-import 'package:url_launcher/url_launcher.dart';
+
+import 'Call_of_papers.dart';
+import 'Committee.dart';
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,7 +29,8 @@ class Home extends StatelessWidget {
         drawer: Drawer(
             child: ListView(
               padding: EdgeInsets.zero,
-              children: [ListTile(
+              children: [
+                ListTile(
                 title: Text("Home"),
                 onTap: () {
                   Home();
@@ -48,7 +47,7 @@ class Home extends StatelessWidget {
         body: Home(),
       ),
       desktop: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
           appBar: AppBar(
             leading: SvgPicture.asset(
@@ -69,6 +68,12 @@ class Home extends StatelessWidget {
                   Tab(
                     child: Text(
                       "Committee",
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Call for Papers",
                       style: TextStyle(fontSize: 16),
                     ),
                   ),
@@ -134,7 +139,8 @@ class Home extends StatelessWidget {
           body: TabBarView(
             children: [
               HomeView(),
-              FancyBackgroundApp(),
+              Committee(),
+              Call_for_papers(),
               FancyBackgroundApp(),
               FancyBackgroundApp(),
             ],
