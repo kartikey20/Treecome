@@ -81,7 +81,7 @@ class HomeView extends StatelessWidget {
                     GridPlacement(
                       columnStart: 1,
                       rowStart: 1,
-                      child: Center(child: Text("fdsd")),
+                      child: Center(child: Text("")),
                     ),
                   ],
                 ),
