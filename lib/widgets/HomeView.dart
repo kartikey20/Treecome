@@ -81,7 +81,38 @@ class HomeView extends StatelessWidget {
                     GridPlacement(
                       columnStart: 1,
                       rowStart: 1,
-                      child: Center(child: Text("")),
+                      child: DefaultTabController(
+                        length: 1,
+                        child: Scaffold(
+                          appBar: AppBar(
+                            flexibleSpace: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                TabBar(
+                                  tabs: [
+                                    Tab(
+                                      icon: Icon(Icons.label_important_outline_rounded),child: Text("Important Dates"),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                          body: TabBarView(
+                            children: [
+                              Column(
+                                children: [
+                                  Text("Last date of paper submission : Feb 15, 2021")
+                              Text("Acceptance Notification : Feb 28, 2021")
+                          Text("Camera ready paper submission : March 05, 2021")
+                             Text(" Conference : March 18-19,2021"))],
+                          
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),),
                     ),
                   ],
                 ),
