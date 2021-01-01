@@ -107,7 +107,7 @@ class Home extends StatelessWidget {
                                             child: Text("Important Dates"),
                                           ),
                                           Tab(
-                                            child: Text("Important Dates"),
+                                            child: Text("Notification"),
                                           ),
                                         ])
                                       ],
