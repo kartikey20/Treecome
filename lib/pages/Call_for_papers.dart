@@ -5,7 +5,9 @@ class Call_for_papers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        children: [Text(""), Text("")],
+        children: [
+          Text(""),
+          Text("")],
       ),
     );
   }

@@ -145,7 +145,7 @@ class Home extends StatelessWidget {
                                         TimelineTile(
                                           oppositeContents: Padding(
                                             padding: const EdgeInsets.all(20.0),
-                                            child: Text('Feb 15, 2021'),
+                                            child: Text('Feb 28, 2021'),
                                           ),
                                           contents: Card(
                                             child: Container(
@@ -219,7 +219,7 @@ class Home extends StatelessWidget {
                                         TimelineTile(
                                           oppositeContents: Padding(
                                             padding: const EdgeInsets.all(20.0),
-                                            child: Text('Mar 05, 2021'),
+                                            child: Text('Mar 18-19, 2021'),
                                           ),
                                           contents: Card(
                                             child: Container(
