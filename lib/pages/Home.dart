@@ -232,7 +232,7 @@ class Home extends StatelessWidget {
                                               MdiIcons.accountGroupOutline,
                                               size: 30,
                                             ),
-                                            startConnector: DashedLineConnector(
+                                            startConnector: SolidLineConnector(
                                               color: Colors.green,
                                             ),
                                           ),
