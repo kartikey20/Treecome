@@ -1,13 +1,13 @@
-class Notification_model {
+class NotificationModel {
   final String notification;
   final String date;
 
-  Notification_model({this.notification, this.date});
+  NotificationModel({this.notification, this.date});
 
-  factory Notification_model.fromJson(Map<String, dynamic> json) {
-    return Notification_model(
-      notification: json['name'] as String,
-      date: json['designation'] as String,
+  factory NotificationModel.fromJson(Map<String, dynamic> json) {
+    return NotificationModel(
+      notification: json['title'] as String,
+      date: json['date'] as String,
     );
   }
 }

@@ -4,7 +4,6 @@ import 'package:flutter/rendering.dart';
 import 'package:animations/animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/pages/Home.dart';
 
@@ -83,7 +82,7 @@ class MyApp extends StatelessWidget {
                 ),
           ),
         ),
-        home: Mobile(),
+        home: Home(),
       ),
       desktop: MaterialApp(
         initialRoute: "/",
@@ -113,117 +112,8 @@ class MyApp extends StatelessWidget {
                 ),
           ),
         ),
-        home: Desktop(),
+        home: Home(),
       ),
-    );
-  }
-}
-
-class Mobile extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: Drawer(
-        elevation: 5,
-        child: ListView(
-          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-          shrinkWrap: true,
-          children: <Widget>[
-            DrawerHeader(
-              child: Row(
-                children: [
-                  Icon(MdiIcons.palmTree),
-                  Text('Treecome 2021'),
-                ],
-              ),
-            ),
-            ListTile(
-              title: Text(
-                "Home",
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text(
-                "Committee",
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text(
-                "Call for Papers",
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text(
-                "Registration",
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text(
-                "Contact Us",
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-              onTap: () {},
-            ),
-          ],
-        ),
-      ),
-      appBar: AppBar(
-        centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(MdiIcons.palmTree),
-            SelectableText("Treecome"),
-          ],
-        ),
-        actions: [Icon(Icons.search)],
-      ),
-      body: Home(),
-    );
-  }
-}
-
-class Desktop extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Treecome"),
-        leading: Icon(MdiIcons.palmTree),
-        actions: [
-          FlatButton(
-            onPressed: () {},
-            child: Text("Home"),
-          ),
-          FlatButton(
-            onPressed: () {},
-            child: Text("Commttiee"),
-          ),
-          FlatButton(
-            onPressed: () {},
-            child: Text("Call for Papers"),
-          ),
-          FlatButton(
-            onPressed: () {},
-            child: Text("Registration"),
-          ),
-          FlatButton(
-            onPressed: () {},
-            child: Text("Contact Us"),
-          ),
-        ],
-      ),
-      body: Home(),
     );
   }
 }
