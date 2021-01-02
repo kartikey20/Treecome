@@ -18,11 +18,11 @@ class Home extends StatelessWidget {
           children: [
             AboutConferenceWidget(0.7, 0.3, 1, 0, 1, 0),
             // params : (column1, column2, row1, row2, columnStart, rowStart)
-            InvitedSpeakersWidget(Axis.horizontal, true, true, 0.8, 400),
+/*            InvitedSpeakersWidget(Axis.horizontal, true, true, 0.8, 400),
             // params : (direction, autoPlay, infiniteScroll)
             ProceedingPublicationsWidget(Axis.horizontal, true),
             // params : (direction)
-            JournalPublicationsWidget(Axis.horizontal, true),
+            JournalPublicationsWidget(Axis.horizontal, true),*/
             // params : (direction)
           ],
         ),
@@ -31,11 +31,11 @@ class Home extends StatelessWidget {
           children: [
             AboutConferenceWidget(0.7, 0.3, 1, 0, 1, 0),
             // params : (column1, column2, row1, row2, columnStart, rowStart)
-            InvitedSpeakersWidget(Axis.horizontal, true, true, 0.8, 400),
+/*            InvitedSpeakersWidget(Axis.horizontal, true, true, 0.8, 400),
             // params : (direction, autoPlay, infiniteScroll)
             ProceedingPublicationsWidget(Axis.horizontal, true),
             // params : (direction)
-            JournalPublicationsWidget(Axis.horizontal, true),
+            JournalPublicationsWidget(Axis.horizontal, true),*/
             // params : (direction)
           ],
         ),

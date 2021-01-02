@@ -5,7 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 Widget myAppBarWidget(String title) {
   return PreferredSize(
-    preferredSize: Size.fromHeight(20),
+    preferredSize: Size.fromHeight(56),
     child: ScreenTypeLayout(
       mobile: AppBar(
         elevation: 0,
