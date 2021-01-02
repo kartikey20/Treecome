@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:treecome/widgets/AboutConferenceWidget.dart';
+import 'package:treecome/widgets/ConferenceWidget.dart';
 import 'package:treecome/widgets/AppBarWidget.dart';
 import 'package:treecome/widgets/InvitedSpeakersWidget.dart';
 import 'package:treecome/widgets/JournalPublicationWidget.dart';
@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
         mobile: ListView(
           shrinkWrap: true,
           children: [
-            AboutConferenceWidget(0.7, 0.3, 1, 0, 1, 0),
+            ConferenceWidget(),
             // params : (column1, column2, row1, row2, columnStart, rowStart)
 /*            InvitedSpeakersWidget(Axis.horizontal, true, true, 0.8, 400),
             // params : (direction, autoPlay, infiniteScroll)
@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
         desktop: ListView(
           shrinkWrap: true,
           children: [
-            AboutConferenceWidget(0.7, 0.3, 1, 0, 1, 0),
+            ConferenceWidget(),
             // params : (column1, column2, row1, row2, columnStart, rowStart)
 /*            InvitedSpeakersWidget(Axis.horizontal, true, true, 0.8, 400),
             // params : (direction, autoPlay, infiniteScroll)
