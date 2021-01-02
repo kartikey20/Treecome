@@ -10,32 +10,6 @@ void main() {
   runApp(MyApp());
 }
 
-class App extends StatelessWidget {
-  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder(
-      // Initialize FlutterFire:
-      future: _initialization,
-      builder: (context, snapshot) {
-        // Check for errors
-        if (snapshot.hasError) {
-          return Text("fdsfd");
-        }
-
-        // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
-          return MyApp();
-        }
-
-        // Otherwise, show something whilst waiting for initialization to complete
-        return CircularProgressIndicator();
-      },
-    );
-  }
-}
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -54,44 +28,35 @@ class MyApp extends StatelessWidget {
         900: Color(0xff309071),
       },
     );
-    return MediaQuery(
-      data: MediaQueryData(),
-      child: MaterialApp(
-        title: 'Treecome 2021',
-        theme: ThemeData(
-          pageTransitionsTheme: PageTransitionsTheme(
-            builders: {
-              TargetPlatform.android: SharedAxisPageTransitionsBuilder(
-                transitionType: SharedAxisTransitionType.horizontal,
-              ),
-              TargetPlatform.iOS: SharedAxisPageTransitionsBuilder(
-                transitionType: SharedAxisTransitionType.horizontal,
-              ),
-            },
-          ),
-          primarySwatch: primaryGreen,
-          textTheme: GoogleFonts.robotoTextTheme(
-            Theme.of(context).textTheme.copyWith(
-                  headline1: TextStyle(
-                      fontSize: MediaQueryData().size.width <= 600 ? 20 : 40,
-                      color: Colors.black,
-                      height: MediaQueryData().size.width <= 600 ? 1 : 2),
-                  bodyText1: TextStyle(
-                    fontSize: 16.0,
-                    height: 2,
-                    color: HexColor("#696E83"),
-                  ),
-                ),
+    return MaterialApp(
+      title: 'Treecome 2021',
+      theme: ThemeData(
+        pageTransitionsTheme: PageTransitionsTheme(
+          builders: {
+            TargetPlatform.android: SharedAxisPageTransitionsBuilder(
+              transitionType: SharedAxisTransitionType.horizontal,
+            ),
+            TargetPlatform.iOS: SharedAxisPageTransitionsBuilder(
+              transitionType: SharedAxisTransitionType.horizontal,
+            ),
+          },
+        ),
+        primarySwatch: primaryGreen,
+        textTheme: GoogleFonts.robotoTextTheme(
+          Theme.of(context).textTheme.copyWith(
+            headline1: TextStyle(
+                fontSize:  40,
+                color: Colors.black,
+                height:  2),
+            bodyText1: TextStyle(
+              fontSize: 16.0,
+              height: 2,
+              color: HexColor("#696E83"),
+            ),
           ),
         ),
-        home: myHome(),
       ),
+      home: Home(),
     );
-  }
-}
-class myHome extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Home();
   }
 }
