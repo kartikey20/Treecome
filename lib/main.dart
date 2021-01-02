@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:animations/animations.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/pages/Home.dart';
@@ -12,7 +13,6 @@ void main() {
 }
 
 class App extends StatelessWidget {
-  // Create the initialization Future outside of `build`:
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
 
   @override
@@ -56,38 +56,64 @@ class MyApp extends StatelessWidget {
         900: Color(0xff309071),
       },
     );
-    return MaterialApp(
-      initialRoute: "/",
-      routes: {},
-      title: 'Treecome 2021',
-      theme: ThemeData(
-        buttonTheme: ButtonThemeData(
-          buttonColor: Color(0xffff914d),
-          textTheme: ButtonTextTheme.accent,
-          colorScheme:
-              Theme.of(context).colorScheme.copyWith(secondary: Colors.white),
-        ),
-        pageTransitionsTheme: PageTransitionsTheme(
-          builders: {
-            TargetPlatform.android: SharedAxisPageTransitionsBuilder(
-              transitionType: SharedAxisTransitionType.horizontal,
-            ),
-            TargetPlatform.iOS: SharedAxisPageTransitionsBuilder(
-              transitionType: SharedAxisTransitionType.horizontal,
-            ),
-          },
-        ),
-        primarySwatch: primaryGreen,
-        textTheme: GoogleFonts.robotoTextTheme(
-          Theme.of(context).textTheme.apply(
-                fontSizeFactor: 1,
-                fontSizeDelta: 2.0,
+    return ScreenTypeLayout(
+      mobile: MaterialApp(
+        initialRoute: "/",
+        routes: {},
+        title: 'Treecome 2021',
+        theme: ThemeData(
+          pageTransitionsTheme: PageTransitionsTheme(
+            builders: {
+              TargetPlatform.android: SharedAxisPageTransitionsBuilder(
+                transitionType: SharedAxisTransitionType.horizontal,
               ),
+              TargetPlatform.iOS: SharedAxisPageTransitionsBuilder(
+                transitionType: SharedAxisTransitionType.horizontal,
+              ),
+            },
+          ),
+          primarySwatch: primaryGreen,
+          textTheme: GoogleFonts.robotoTextTheme(
+            Theme.of(context).textTheme.copyWith(
+                  headline1: TextStyle(fontSize: 20.0, color: Colors.black),
+                  bodyText1: TextStyle(
+                    fontSize: 16.0,
+                    color: HexColor("#696E83"),
+                  ),
+                ),
+          ),
         ),
+        home: Mobile(),
       ),
-      home: ScreenTypeLayout(
-        mobile: Mobile(),
-        desktop: Desktop(),
+      desktop: MaterialApp(
+        initialRoute: "/",
+        routes: {},
+        title: 'Treecome 2021',
+        theme: ThemeData(
+          pageTransitionsTheme: PageTransitionsTheme(
+            builders: {
+              TargetPlatform.android: SharedAxisPageTransitionsBuilder(
+                transitionType: SharedAxisTransitionType.horizontal,
+              ),
+              TargetPlatform.iOS: SharedAxisPageTransitionsBuilder(
+                transitionType: SharedAxisTransitionType.horizontal,
+              ),
+            },
+          ),
+          primarySwatch: primaryGreen,
+          textTheme: GoogleFonts.robotoTextTheme(
+            Theme.of(context).textTheme.copyWith(
+                  headline1:
+                      TextStyle(fontSize: 40.0, color: Colors.black, height: 2),
+                  bodyText1: TextStyle(
+                    fontSize: 16.0,
+                    height: 2,
+                    color: HexColor("#696E83"),
+                  ),
+                ),
+          ),
+        ),
+        home: Desktop(),
       ),
     );
   }
@@ -100,30 +126,50 @@ class Mobile extends StatelessWidget {
       drawer: Drawer(
         elevation: 5,
         child: ListView(
-          children: [
+          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+          shrinkWrap: true,
+          children: <Widget>[
+            DrawerHeader(
+              child: Row(
+                children: [
+                  Icon(MdiIcons.palmTree),
+                  Text('Treecome 2021'),
+                ],
+              ),
+            ),
             ListTile(
-              contentPadding: EdgeInsets.all(10),
-              title: Text("Home"),
+              title: Text(
+                "Home",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
               onTap: () {},
             ),
             ListTile(
-              contentPadding: EdgeInsets.all(10),
-              title: Text("Committee"),
+              title: Text(
+                "Committee",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
               onTap: () {},
             ),
             ListTile(
-              contentPadding: EdgeInsets.all(10),
-              title: Text("Call for Papers"),
+              title: Text(
+                "Call for Papers",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
               onTap: () {},
             ),
             ListTile(
-              contentPadding: EdgeInsets.all(10),
-              title: Text("Registration"),
+              title: Text(
+                "Registration",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
               onTap: () {},
             ),
             ListTile(
-              contentPadding: EdgeInsets.all(10),
-              title: Text("Contact Us"),
+              title: Text(
+                "Contact Us",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
               onTap: () {},
             ),
           ],
@@ -132,6 +178,9 @@ class Mobile extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Icon(MdiIcons.palmTree),
             SelectableText("Treecome"),
