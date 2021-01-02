@@ -4,10 +4,8 @@ import 'package:flutter/rendering.dart';
 import 'package:animations/animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:treecome/pages/Call_for_papers.dart';
-import 'package:treecome/pages/Committee.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/pages/Home.dart';
-import 'package:treecome/pages/Registration.dart';
 
 void main() {
   runApp(MyApp());
@@ -60,16 +58,15 @@ class MyApp extends StatelessWidget {
     );
     return MaterialApp(
       initialRoute: "/",
-      routes: {
-/*
-        '/': (context) => Home(),
-*/
-        "/Committee": (context) => Committee(),
-/*        "/Call_for_papers": (context) => Call_for_papers(),
-        "/Registration": (context) => Registration(),*/
-      },
+      routes: {},
       title: 'Treecome 2021',
       theme: ThemeData(
+        buttonTheme: ButtonThemeData(
+          buttonColor: Color(0xffff914d),
+          textTheme: ButtonTextTheme.accent,
+          colorScheme:
+              Theme.of(context).colorScheme.copyWith(secondary: Colors.white),
+        ),
         pageTransitionsTheme: PageTransitionsTheme(
           builders: {
             TargetPlatform.android: SharedAxisPageTransitionsBuilder(
@@ -82,68 +79,102 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: primaryGreen,
         textTheme: GoogleFonts.robotoTextTheme(
-          Theme.of(context).textTheme.apply(fontSizeFactor: 1,fontSizeDelta: 2.0,),
+          Theme.of(context).textTheme.apply(
+                fontSizeFactor: 1,
+                fontSizeDelta: 2.0,
+              ),
         ),
       ),
-      home: MyHomePage(),
+      home: ScreenTypeLayout(
+        mobile: Mobile(),
+        desktop: Desktop(),
+      ),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-
+class Mobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 4,
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          leading: Icon(MdiIcons.palmTree),
-          title: Text("Treecome"),
-          actions: [
-            SizedBox(
-              width: 800,
-              child: TabBar(
-                tabs: [
-                  Tab(
-                    child: Text(
-                      "Home",
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
-                  Tab(
-                    child: Text(
-                      "Committee",
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
-                  Tab(
-                    child: Text(
-                      "Call for Papers",
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
-                  Tab(
-                    child: Text(
-                      "Registration",
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-        body: TabBarView(
+    return Scaffold(
+      drawer: Drawer(
+        elevation: 5,
+        child: ListView(
           children: [
-            Home(),
-            Committee(),
-            Call_for_papers(),
-            Registration()
+            ListTile(
+              contentPadding: EdgeInsets.all(10),
+              title: Text("Home"),
+              onTap: () {},
+            ),
+            ListTile(
+              contentPadding: EdgeInsets.all(10),
+              title: Text("Committee"),
+              onTap: () {},
+            ),
+            ListTile(
+              contentPadding: EdgeInsets.all(10),
+              title: Text("Call for Papers"),
+              onTap: () {},
+            ),
+            ListTile(
+              contentPadding: EdgeInsets.all(10),
+              title: Text("Registration"),
+              onTap: () {},
+            ),
+            ListTile(
+              contentPadding: EdgeInsets.all(10),
+              title: Text("Contact Us"),
+              onTap: () {},
+            ),
           ],
         ),
       ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Row(
+          children: [
+            Icon(MdiIcons.palmTree),
+            SelectableText("Treecome"),
+          ],
+        ),
+        actions: [Icon(Icons.search)],
+      ),
+      body: Home(),
+    );
+  }
+}
+
+class Desktop extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Treecome"),
+        leading: Icon(MdiIcons.palmTree),
+        actions: [
+          FlatButton(
+            onPressed: () {},
+            child: Text("Home"),
+          ),
+          FlatButton(
+            onPressed: () {},
+            child: Text("Commttiee"),
+          ),
+          FlatButton(
+            onPressed: () {},
+            child: Text("Call for Papers"),
+          ),
+          FlatButton(
+            onPressed: () {},
+            child: Text("Registration"),
+          ),
+          FlatButton(
+            onPressed: () {},
+            child: Text("Contact Us"),
+          ),
+        ],
+      ),
+      body: Home(),
     );
   }
 }

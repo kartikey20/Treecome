@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Commttiee extends StatelessWidget {
+class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
