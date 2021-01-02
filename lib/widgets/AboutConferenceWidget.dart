@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
 import 'package:treecome/widgets/SideTabWidget.dart';
 
-class AboutConference extends StatelessWidget {
+class AboutConferenceWidget extends StatelessWidget {
   var column1, column2, row1, row2, columnStart, rowStart;
 
-  AboutConference(this.column1, this.column2, this.row1, this.row2,
+  AboutConferenceWidget(this.column1, this.column2, this.row1, this.row2,
       this.columnStart, this.rowStart);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 300,
       child: LayoutGrid(
         columnGap: 30,
         templateColumnSizes: [
@@ -42,7 +43,10 @@ class AboutConference extends StatelessWidget {
             ),
           ),
           GridPlacement(
-              rowStart: rowStart, columnStart: columnStart, child: SideTab())
+            rowStart: rowStart,
+            columnStart: columnStart,
+            child: SideTabWidget(),
+          )
         ],
       ),
     );

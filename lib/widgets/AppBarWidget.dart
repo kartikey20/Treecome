@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-Widget myAppBar(String title) {
+Widget myAppBarWidget(String title) {
   return ScreenTypeLayout(
     mobile: AppBar(
       elevation: 0,

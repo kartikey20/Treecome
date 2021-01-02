@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:treecome/pages/Registration.dart';
 
-class ResgistrationTable extends StatelessWidget {
+class ResgistrationTableWidget extends StatelessWidget {
   bool visible;
 
-  ResgistrationTable(this.visible);
+  ResgistrationTableWidget(this.visible);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,8 @@ class ResgistrationTable extends StatelessWidget {
         children: [
           Visibility(
             visible: visible,
-            child: Text("Registration"),
+            child: Text("Registration",
+                style: Theme.of(context).textTheme.headline1),
           ),
           Table()
         ],

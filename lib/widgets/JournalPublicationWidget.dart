@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-class JournalPublications extends StatelessWidget {
-   Axis direction;
-   JournalPublications(this.direction);
+class JournalPublicationsWidget extends StatelessWidget {
+  Axis direction;
+  bool visible;
+
+  JournalPublicationsWidget(this.direction, this.visible);
+
   @override
   Widget build(BuildContext context) {
     return Column(

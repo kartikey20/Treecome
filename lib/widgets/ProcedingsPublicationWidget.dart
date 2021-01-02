@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ProceedingPublications extends StatelessWidget {
+class ProceedingPublicationsWidget extends StatelessWidget {
   Axis direction;
+  bool visible;
 
-  ProceedingPublications(this.direction);
+  ProceedingPublicationsWidget(this.direction, this.visible);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Text(
-          "",
+          "Proceedings Publication",
           style: Theme.of(context).textTheme.headline1,
-        ),
-        Text(
-          "",
-          style: Theme.of(context).textTheme.bodyText1,
         ),
         Flex(
           direction: direction,

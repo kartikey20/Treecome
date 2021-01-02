@@ -1,12 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class InvitedSpeakers extends StatelessWidget {
+class InvitedSpeakersWidget extends StatelessWidget {
   Axis direction;
   bool autoPlay, infiniteScroll;
   var viewportFraction, height;
 
-  InvitedSpeakers(this.direction, this.autoPlay, this.infiniteScroll,
+  InvitedSpeakersWidget(this.direction, this.autoPlay, this.infiniteScroll,
       this.viewportFraction, this.height);
 
   @override

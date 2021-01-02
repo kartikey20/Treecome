@@ -9,13 +9,13 @@ class Registration extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: Scaffold(
-        appBar: myAppBar("Registration"),
-        drawer: MyDrawer(),
-        body: ResgistrationTable(false),
+        appBar: myAppBarWidget("Registration"),
+        drawer: MyDrawerWidget(),
+        body: ResgistrationTableWidget(false),
       ),
       desktop: Scaffold(
-        appBar: myAppBar("Registration"),
-        body: ResgistrationTable(true),
+        appBar: myAppBarWidget("Registration"),
+        body: ResgistrationTableWidget(true),
       ),
     );
   }

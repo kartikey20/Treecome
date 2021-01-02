@@ -6,7 +6,7 @@ import 'package:treecome/pages/ContactUs.dart';
 import 'package:treecome/pages/Home.dart';
 import 'package:treecome/pages/Registration.dart';
 
-class MyDrawer extends StatelessWidget {
+class MyDrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            title: Commttiee(),
+            title: Committee(),
             onTap: () {},
           ),
           ListTile(
