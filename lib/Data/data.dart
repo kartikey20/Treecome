@@ -118,29 +118,29 @@ List conference = [
   {
     "name": "Prof. A K Gautam",
     "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "location": "GBPIET Pauri India"
   }
 ];
 List finance = [
   {
     "name": "Dr. M K Agrawal ",
-    "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "designation": "Associate Professor",
+    "location": "GBPIET Pauri India"
   },
   {
     "name": "Dr. Bhola Jha",
-    "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "designation": "Associate Professor",
+    "location": "GBPIET Pauri India"
   },
   {
     "name": "Dr. Amit Joshi",
-    "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "designation": "Assistant Professor",
+    "location": "GBPIET Pauri India"
   },
   {
     "name": "Mr. Sandeep Kumar",
-    "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "designation": "Registrar",
+    "location": "GBPIET Pauri India"
   }
 ];
 List general = [
@@ -158,112 +158,112 @@ List general = [
 List organizing = [
   {
     "name": "Dr. M K Agrawal",
-    "designation": "Professor",
+    "designation": "Associate Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. Y Kumar",
-    "designation": "Professor",
+    "designation": "Associate Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. Sanjeev Naithani",
-    "designation": "Professor",
+    "designation": "Associate Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. Bhola Jha",
-    "designation": "Professor",
+    "designation": "Associate Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. K S Bhatia",
-    "designation": "Professor",
+    "designation": "Associate Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Atul Katiyar",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Shishir Sarkar",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. R B Yadav",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. Balraj Singh ",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. Rajkumar Buyya",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Manoj Kumar",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. Rajkumar Buyya",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Vinay Mohan ",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Dr. Manisha Bhat",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Sandeep Kumar",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Ajay Kumar ",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Sandeep Rana ",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Pushkar Praveen ",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. S S Patel ",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Neem Sagar",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Abhilekh Barthwal",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
   {
     "name": "Mr. Rishi Raj Singh",
-    "designation": "Professor",
+    "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   }
 ];

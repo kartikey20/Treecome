@@ -9,8 +9,22 @@ class ContactUsForm extends StatelessWidget {
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
       children: [
-        Text("For further information, please contact",
-            style: Theme.of(context).textTheme.bodyText1),
+        Center(
+          child: Text(
+            "Venue",
+            style: Theme.of(context).textTheme.headline1,
+          ),
+        ),
+        Center(
+          child: Text(
+            "Govind Ballabh Pant Institute of Engineering & Technology, Ghurdauri, Pauri, Garhwal, Uttarakhand 246194",
+            style: Theme.of(context).textTheme.bodyText1,
+          ),
+        ),
+        Center(
+          child: Text("For further information, please contact",
+              style: Theme.of(context).textTheme.bodyText1),
+        ),
         Card(
           child: ListTile(
             title: Center(
