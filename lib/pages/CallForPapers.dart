@@ -38,6 +38,62 @@ class CallForPapers extends StatelessWidget {
               callForPapers,
               style: Theme.of(context).textTheme.bodyText1,
             ),
+            SizedBox(height: 20,),
+            Text(
+                "This conference covers the following salient topics of interest but not limited to: ",
+                style: Theme.of(context).textTheme.bodyText1),
+            SizedBox(height: 20,),
+
+            Card(
+              child: ListTile(
+                title: Text(" Track 1 : Power Electronics & Drives ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(" Track 2: Renewable energy ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(" Track 3: Instrumentation & Control  ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text("Track 4 : Power systems ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                    " Track 5 : Solid state devices, VLSI and electronic circuits ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(" Track 6 :Antenna, Microwave and Communication ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(" Track 7: Signal & image processing ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                    " Track 8 :Artificial Intelligence , Machine learning, IoT, Embedded etc. ",
+                    style: Theme.of(context).textTheme.bodyText1),
+              ),
+            ),
           ],
         ),
       ),
