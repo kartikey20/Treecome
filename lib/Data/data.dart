@@ -3,6 +3,11 @@ import 'dart:core';
 String callForPapers = "Prospective authors are invited to submit original manuscripts (unpublished/not communicated/not under review of any   other conference or journal) of their research work on recent developments in the topics related to the conference. It is  required that the manuscript follows the standard camera-ready format for which the template is provided on the conference website. All submitted papers will be peer reviewed and evaluated based on originality, technical strength, scientific contribution, relevance to conference theme, and readability. Acceptance notification of papers will be communicated to authors by email. The authors of the accepted papers will be allowed to make corrections in accordance with the suggestions and comments of the reviewers and final camera-ready papers must be submitted within the final submission deadline. ";
 List advisory = [
   {
+    "name": "Dr. Rajkumar Buyya",
+    "designation": "Professor",
+    "location": "University of Melbourne, Australia"
+  },
+  {
     "name": "Dr. Bhim Singh",
     "designation": "Professor",
     "location": " IIT Delhi"
@@ -97,11 +102,7 @@ List advisory = [
     "designation": "Professor",
     "location": "IIT Bangladesh"
   },
-  {
-    "name": "Dr. Rajkumar Buyya",
-    "designation": "Professor",
-    "location": "University of Melbourne, Australia"
-  }
+
 ];
 List conference = [
   {
@@ -289,7 +290,7 @@ List technical = [
   }
 ];
 List patron = [
-  {"name" :"Prof. M P S Chauhan ",
+  {"name": "Prof. M P S Chauhan ",
     "designation": "Professor",
     "location": "GBPIET Pauri India"
   }
