@@ -17,9 +17,11 @@ class Committee extends StatelessWidget {
           scrollDirection: Axis.vertical,
           shrinkWrap: true,
           children: [
+            Committee()
+            CommitteeList("General", general),
             CommitteeList("Advisory", advisory),
             CommitteeList("Organizing", organizing),
-            CommitteeList("General", general),
+
             CommitteeList("conference", conference),
             CommitteeList("finance", finance),
             CommitteeList("technical", technical),
@@ -36,13 +38,31 @@ class Committee extends StatelessWidget {
             children: [
               Text(
                 "Committee",
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme
+                    .of(context)
+                    .textTheme
+                    .headline1,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Expanded(
+                    flex: 1,
+                    child: ListView(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        CommitteeList("general", general),
+                        CommitteeList("Conference", conference),
+                        CommitteeList("technical", technical),
+                        CommitteeList("Finance", finance),
+                        CommitteeList("Organizing Secretaries", organizing)
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 30,),
                   Expanded(
                     flex: 1,
                     child: ListView(
@@ -60,21 +80,6 @@ class Committee extends StatelessWidget {
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       children: [
-                        CommitteeList("Organizing", organizing),
-
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 30,),
-                  Expanded(
-                    flex: 1,
-                    child: ListView(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        CommitteeList("technical", technical),
-                        CommitteeList("finance", finance),
-                        CommitteeList("general", general)
                       ],
                     ),
                   ),
