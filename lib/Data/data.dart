@@ -292,7 +292,5 @@ List technical = [
 List track1 = [];
 List track2 = [];
 List track3 = [];
-String Journaltext =
-    "The extended version of selected papers will be recommended to publish with the following journals which are indexed in Web of Science, Scopus, DBLP, ACM, and many more.";
-String Proceedingtext =
-    "The Conference Proceedings will be published in CRC Press/ Balkema, Taylor & Francis Group, submitted for indexing by Clarivate Analytics (Formerly known as Thomson Reuters/ISI), Web of Knowledge, SciVerse, SCOPUS, EI Compendex, Google Scholar and many others.";
+String Journaltext = "Updated soon";
+String Proceedingtext = "Updated soon";
