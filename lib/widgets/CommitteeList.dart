@@ -10,7 +10,6 @@ class CommitteeList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      physics: NeverScrollableScrollPhysics(),
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
      children: [
