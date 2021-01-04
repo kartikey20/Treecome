@@ -14,6 +14,7 @@ class Committee extends StatelessWidget {
         drawer: MyDrawerWidget(),
         appBar: myAppBarWidget(context, "Committee"),
         body: ListView(
+          scrollDirection: Axis.vertical,
           shrinkWrap: true,
           children: [
             CommitteeList("Advisory", advisory),
