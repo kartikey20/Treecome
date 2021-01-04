@@ -298,5 +298,5 @@ List patron = [
 List track1 = [];
 List track2 = [];
 List track3 = [];
-String Journaltext = "Updated soon";
-String Proceedingtext = "Updated soon";
+String Journaltext = "Updating soon";
+String Proceedingtext = "Updating soon";
