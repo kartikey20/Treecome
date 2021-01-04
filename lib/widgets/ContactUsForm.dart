@@ -9,51 +9,37 @@ class ContactUsForm extends StatelessWidget {
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
       children: [
-        TextFormField(
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(2),
-            labelText: 'Name',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5),
+        Card(
+          child: ListTile(
+            title: Center(
+              child: Text(
+                "Dr. Bhola Jha",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ),
+            subtitle: Column(
+              children: [
+                Text("Associate Professor",
+                    style: Theme.of(context).textTheme.bodyText1),
+                Text("8868094802", style: Theme.of(context).textTheme.bodyText1)
+              ],
             ),
           ),
         ),
-        SizedBox(height: 30,),
-        TextFormField(
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(2),
-            labelText: 'Email',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5),
+        Card(
+          child: ListTile(
+            title: Center(
+              child: Text(
+                "Mr Puskhar Praveeen",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
             ),
-          ),
-        ),
-        SizedBox(height: 30,),
-
-        TextFormField(
-          maxLines: 8,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(2),
-            labelText: 'Message',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-          ),
-        ),
-        SizedBox(height: 30,),
-        ButtonTheme(colorScheme: Theme.of(context)
-            .colorScheme
-            .copyWith(secondary: HexColor("#ff309071")),
-          minWidth: 30.0,
-          height: 60.0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-          child: RaisedButton(
-            onPressed: () {},
-            child: Text(
-              "Submit",
-              style: TextStyle(fontSize: 16, color: Colors.white),
+            subtitle: Column(
+              children: [
+                Text("Assitant Professor",
+                    style: Theme.of(context).textTheme.bodyText1),
+                Text("8527069548", style: Theme.of(context).textTheme.bodyText1)
+              ],
             ),
           ),
         ),
