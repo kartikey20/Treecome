@@ -4,14 +4,16 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/Data/data.dart';
 import 'package:treecome/widgets/AppBarWidget.dart';
 import 'package:treecome/widgets/CommitteeList.dart';
+import 'package:treecome/widgets/DrawerWidget.dart';
 
 class Committee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: myAppBarWidget(context,"Committee"),
-      body: ScreenTypeLayout(
-        mobile: ListView(
+    return ScreenTypeLayout(
+      mobile: Scaffold(
+        drawer: MyDrawerWidget(),
+        appBar: myAppBarWidget(context, "Committee"),
+        body: ListView(
           shrinkWrap: true,
           children: [
             CommitteeList("Advisory", advisory),
@@ -22,7 +24,10 @@ class Committee extends StatelessWidget {
             CommitteeList("technical", technical),
           ],
         ),
-        desktop: ListView(
+      ),
+      desktop: Scaffold(
+        appBar: myAppBarWidget(context, "Committee"),
+        body: ListView(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
           children: [
@@ -30,58 +35,48 @@ class Committee extends StatelessWidget {
               "Committee",
               style: Theme.of(context).textTheme.headline1,
             ),
-            SizedBox(
-              height: 1000,
-              child: LayoutGrid(
-                columnGap: 12,
-                templateColumnSizes: [
-                  FlexibleTrackSize(0.3),
-                  FlexibleTrackSize(0.3),
-                  FlexibleTrackSize(0.3),
-                ],
-                templateRowSizes: [
-                  FlexibleTrackSize(1),
-                ],
-                children: [
-                  GridPlacement(
-                    rowStart: 0,
-                    columnStart: 0,
-                    child: ListView(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        CommitteeList("Advisory", advisory),
-                        CommitteeList("general", general),
-                      ],
-                    ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      CommitteeList("Advisory", advisory),
+                    ],
                   ),
-                  GridPlacement(
-                    rowStart: 0,
-                    columnStart: 1,
-                    child: ListView(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        CommitteeList("Organizing", organizing),
-                        CommitteeList("finance", finance)
-                      ],
-                    ),
+                ),
+                SizedBox(width: 30,),
+                Expanded(
+                  flex: 1,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      CommitteeList("Organizing", organizing),
+
+                    ],
                   ),
-                  GridPlacement(
-                    rowStart: 0,
-                    columnStart: 2,
-                    child: ListView(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        CommitteeList("technical", technical),
-                        CommitteeList("general", general),
-                      ],
-                    ),
+                ),
+                SizedBox(width: 30,),
+                Expanded(
+                  flex: 1,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      CommitteeList("technical", technical),
+                      CommitteeList("finance", finance),
+                      CommitteeList("general", general)
+                    ],
                   ),
-                ],
-              ),
-            ),
+                ),
+              ],
+            )
           ],
         ),
       ),

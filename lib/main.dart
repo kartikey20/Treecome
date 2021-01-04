@@ -58,6 +58,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Treecome 2021',
       theme: ThemeData(
+        buttonTheme: ButtonThemeData(padding: EdgeInsets.fromLTRB(30,0,30,0),
+          buttonColor: Colors.white,
+          textTheme: ButtonTextTheme.accent,
+          colorScheme:
+          Theme.of(context).colorScheme.copyWith(secondary: Colors.white),
+        ),
         pageTransitionsTheme: PageTransitionsTheme(
           builders: {
             TargetPlatform.android: SharedAxisPageTransitionsBuilder(

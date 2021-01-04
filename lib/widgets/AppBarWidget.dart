@@ -21,21 +21,12 @@ Widget myAppBarWidget(BuildContext context, String title) {
             onPressed: () {},
           )
         ],
-        title: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(MdiIcons.palmTree),
-            Text(title),
-          ],
-        ),
+        title: Text(title),
       ),
       desktop: AppBar(
-        automaticallyImplyLeading: false,
+        leading: Icon(MdiIcons.palmTree),
         title: Row(
           children: [
-            Icon(MdiIcons.palmTree),
             Text("Treecome"),
           ],
         ),

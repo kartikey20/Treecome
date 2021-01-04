@@ -15,12 +15,14 @@ class JournalPublicationsWidget extends StatelessWidget {
           Text("Journal Publication",
               style: Theme.of(context).textTheme.headline1),
           Text(Journaltext, style: Theme.of(context).textTheme.bodyText1),
-          ListView(
+          ListView(padding: EdgeInsets.all(30),
         shrinkWrap: true,
             scrollDirection: Axis.vertical,
             children: [
               ImageWidget(),
+              SizedBox(height: 20,),
               ImageWidget(),
+              SizedBox(height: 20,),
               ImageWidget(),
             ],
           )

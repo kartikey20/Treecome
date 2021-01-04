@@ -8,23 +8,27 @@ import 'package:treecome/widgets/DrawerWidget.dart';
 class CallForPapers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: myAppBarWidget(context,"Call for Papers"),
-      body: ScreenTypeLayout(
-        mobile: ListView(
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          children: [
-            Text(
-              callForPapers,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-            CallForPapersWidget("Track 1", track1),
-            CallForPapersWidget("Track 2", track2),
-            CallForPapersWidget("Track 3", track2),
-          ],
+    return ScreenTypeLayout(
+      mobile: Scaffold(
+        drawer: MyDrawerWidget(),
+        appBar: myAppBarWidget(context, "Call for papers"),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+            children: [
+              Text(
+                callForPapers,
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ],
+          ),
         ),
-        desktop: ListView(
+      ),
+      desktop: Scaffold(
+        appBar: myAppBarWidget(context, "Call for papers"),
+        body: ListView(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
           children: [
@@ -34,9 +38,6 @@ class CallForPapers extends StatelessWidget {
               callForPapers,
               style: Theme.of(context).textTheme.bodyText1,
             ),
-            CallForPapersWidget("Track 1", track1),
-            CallForPapersWidget("Track 2", track2),
-            CallForPapersWidget("Track 3", track2),
           ],
         ),
       ),

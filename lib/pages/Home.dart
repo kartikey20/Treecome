@@ -13,55 +13,64 @@ import 'package:treecome/widgets/SideTabWidget.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    bool mobile = MediaQuery.of(context).size.width <= 600;
-    return Scaffold(
-      drawer: MyDrawerWidget(),
-      appBar: myAppBarWidget(context, "Treecome"),
-      body: ScreenTypeLayout(
-        mobile: ListView(
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          children: [
-            AboutConference(),
-            SideTabWidget(),
-            InvitedSpeakersWidget(),
-            JournalPublicationsWidget(),
-            ProceedingPublicationsWidget(),
-          ],
-        ),
-        desktop: ListView(
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          children: [
-            SizedBox(
-              height: 400,
-              child: LayoutGrid(
-                columnGap: 12,
-                templateColumnSizes: [
-                  FlexibleTrackSize(0.7),
-                  FlexibleTrackSize(0.3),
-                ],
-                templateRowSizes: [
-                  FlexibleTrackSize(1),
-                ],
-                children: [
-                  GridPlacement(
-                    rowStart: 0,
-                    columnStart: 0,
-                    child: AboutConference(),
-                  ),
-                  GridPlacement(
-                    rowStart: 0,
-                    columnStart: 1,
-                    child: SideTabWidget(),
-                  ),
-                ],
+    return ScreenTypeLayout(
+      mobile: Scaffold(
+        drawer: MyDrawerWidget(),
+        appBar: myAppBarWidget(context, "Treecome"),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+            children: [
+              AboutConference(),
+              SizedBox(
+                height: 20,
               ),
-            ),
-            InvitedSpeakersWidget(),
-            JournalPublicationsWidget(),
-            ProceedingPublicationsWidget(),
-          ],
+              SideTabWidget(),
+              JournalPublicationsWidget(),
+              ProceedingPublicationsWidget(),
+            ],
+          ),
+        ),
+      ),
+      desktop: Scaffold(
+        appBar: myAppBarWidget(context, "Treecome"),
+        body: Padding(
+          padding: const EdgeInsets.all(30),
+          child: ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+            children: [
+              SizedBox(
+                height: 450,
+                child: LayoutGrid(
+                  columnGap: 12,
+                  templateColumnSizes: [
+                    FlexibleTrackSize(0.7),
+                    FlexibleTrackSize(0.3),
+                  ],
+                  templateRowSizes: [
+                    FlexibleTrackSize(1),
+                  ],
+                  children: [
+                    GridPlacement(
+                      rowStart: 0,
+                      columnStart: 0,
+                      child: AboutConference(),
+                    ),
+                    GridPlacement(
+                      rowStart: 0,
+                      columnStart: 1,
+                      child: SideTabWidget(),
+                    ),
+                  ],
+                ),
+              ),
+              JournalPublicationsWidget(),
+              ProceedingPublicationsWidget(),
+            ],
+          ),
         ),
       ),
     );

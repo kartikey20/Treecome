@@ -10,12 +10,15 @@ class CommitteeList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      physics: NeverScrollableScrollPhysics(),
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
      children: [
-        Text(
-          title,
-          style: Theme.of(context).textTheme.headline1,
+        Center(
+          child: Text(
+            title,
+            style: Theme.of(context).textTheme.headline1,
+          ),
         ),
         ListView.builder(
           scrollDirection: Axis.vertical,
@@ -26,9 +29,11 @@ class CommitteeList extends StatelessWidget {
               clipBehavior: Clip.antiAlias,
               child: ListTile(
                 contentPadding: EdgeInsets.all(10.0),
-                title: Text(
-                  list[index]["name"],
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+                title: Center(
+                  child: Text(
+                    list[index]["name"],
+                    style: TextStyle(fontSize: 18, color: Colors.black,height: 2),
+                  ),
                 ),
                 subtitle: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -38,9 +43,6 @@ class CommitteeList extends StatelessWidget {
                     Text(
                       list[index]["designation"],
                       style: Theme.of(context).textTheme.bodyText1,
-                    ),
-                    SizedBox(
-                      height: 5,
                     ),
                     Text(
                       list[index]["location"],

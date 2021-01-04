@@ -8,7 +8,9 @@ class InvitedSpeakersWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile:Text("fdds"),
+      mobile:ListView(
+        children: [],
+      ),
       desktop:Text("fdssdf"));
   }
 }

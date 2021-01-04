@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/Data/data.dart';
@@ -15,14 +16,17 @@ class ProceedingPublicationsWidget extends StatelessWidget {
           Text("Proceedings Publication",
               style: Theme.of(context).textTheme.headline1),
           Text(Proceedingtext, style: Theme.of(context).textTheme.bodyText1),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              ImageWidget(),
-              ImageWidget(),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(30),
+            child: ListView(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              children: [
+                ImageWidget(),
+                SizedBox(height: 20,),
+                ImageWidget(),
+              ],
+            ),
           )
         ],
       ),

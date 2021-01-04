@@ -15,7 +15,11 @@ class SideTabWidget extends StatelessWidget {
       children: [
         ButtonTheme(
           minWidth: 200.0,
+          padding: EdgeInsets.all(0),
           height: 60.0,
+          colorScheme: Theme.of(context)
+              .colorScheme
+              .copyWith(secondary: HexColor("#ff309071")),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
           ),
@@ -29,7 +33,7 @@ class SideTabWidget extends StatelessWidget {
         ),
         SizedBox(height: mobile ? 30 : 0),
         SizedBox(
-          height: 380,
+          height: 360,
           child: DefaultTabController(
             length: 2,
             child: ClipRRect(
@@ -39,6 +43,7 @@ class SideTabWidget extends StatelessWidget {
                   appBar: PreferredSize(
                     preferredSize: Size.fromHeight(50),
                     child: AppBar(
+                      automaticallyImplyLeading: false,
                       flexibleSpace: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -96,7 +101,8 @@ class SideTabWidget extends StatelessWidget {
                             contents: Card(
                               child: Container(
                                 padding: EdgeInsets.all(8.0),
-                                child: SelectableText('Acceptance Notification'),
+                                child:
+                                    SelectableText('Acceptance Notification'),
                               ),
                             ),
                             node: TimelineNode(
@@ -120,7 +126,8 @@ class SideTabWidget extends StatelessWidget {
                             contents: Card(
                               child: Container(
                                 padding: EdgeInsets.all(8.0),
-                                child: SelectableText('Camera ready paper submission'),
+                                child: SelectableText(
+                                    'Camera ready paper submission'),
                               ),
                             ),
                             node: TimelineNode(
@@ -200,7 +207,8 @@ class SideTabWidget extends StatelessWidget {
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ),
-                            ),Card(
+                            ),
+                            Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
                                 title: SelectableText(
@@ -212,7 +220,8 @@ class SideTabWidget extends StatelessWidget {
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ),
-                            ),Card(
+                            ),
+                            Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
                                 title: SelectableText(
@@ -224,7 +233,8 @@ class SideTabWidget extends StatelessWidget {
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ),
-                            ),Card(
+                            ),
+                            Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
                                 title: SelectableText(
@@ -236,7 +246,8 @@ class SideTabWidget extends StatelessWidget {
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ),
-                            ), Card(
+                            ),
+                            Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
                                 title: SelectableText(

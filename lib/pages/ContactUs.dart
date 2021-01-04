@@ -4,46 +4,25 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/widgets/AppBarWidget.dart';
 import 'package:treecome/widgets/ContactUsForm.dart';
 import 'package:treecome/widgets/ContactUsList.dart';
+import 'package:treecome/widgets/DrawerWidget.dart';
 
 class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: myAppBarWidget(context,"Contact Us"),
-      body: ScreenTypeLayout(
-        mobile: ListView(
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          children: [
-            ContactUsForm(),
-            ContactUsList(),
-          ],
+    return ScreenTypeLayout(
+      mobile: Scaffold(
+        drawer: MyDrawerWidget(),
+        appBar: myAppBarWidget(context, "Contact Us"),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: ContactUsForm(),
         ),
-        desktop: SizedBox(
-          height: 600,
-          child: LayoutGrid(
-            columnGap: 12,
-            templateColumnSizes: [
-              FlexibleTrackSize(0.5),
-              FlexibleTrackSize(0.5),
-            ],
-            templateRowSizes: [
-              FlexibleTrackSize(1),
-            ],
-            children: [
-              GridPlacement(
-                rowStart: 0,
-                columnStart: 0,
-                child: ContactUs(),
-              ),
-              VerticalDivider(),
-              GridPlacement(
-                rowStart: 0,
-                columnStart: 0,
-                child: ContactUsList(),
-              ),
-            ],
-          ),
+      ),
+      desktop: Scaffold(
+        appBar: myAppBarWidget(context, "Contact Us"),
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(500,30,500,30),
+          child: ContactUsForm(),
         ),
       ),
     );
