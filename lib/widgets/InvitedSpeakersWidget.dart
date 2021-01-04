@@ -1,32 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class InvitedSpeakersWidget extends StatelessWidget {
-  Axis direction;
-  bool autoPlay, infiniteScroll;
-  var viewportFraction, height;
-
-  InvitedSpeakersWidget(this.direction, this.autoPlay, this.infiniteScroll,
-      this.viewportFraction, this.height);
-
   @override
   Widget build(BuildContext context) {
-    return CarouselSlider(
-      items: [],
-      options: CarouselOptions(
-        height: height,
-        aspectRatio: 16 / 9,
-        viewportFraction: viewportFraction,
-        initialPage: 0,
-        enableInfiniteScroll: infiniteScroll,
-        reverse: false,
-        autoPlay: autoPlay,
-        autoPlayInterval: Duration(seconds: 3),
-        autoPlayAnimationDuration: Duration(milliseconds: 800),
-        autoPlayCurve: Curves.fastOutSlowIn,
-        enlargeCenterPage: false,
-        scrollDirection: direction,
-      ),
-    );
+    return ScreenTypeLayout(
+      mobile:Text("fdds"),
+      desktop:Text("fdssdf"));
   }
 }

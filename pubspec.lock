@@ -245,13 +245,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  footer:
-    dependency: "direct main"
-    description:
-      name: footer
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.3"
   fuchsia_remote_debug_protocol:
     dependency: transitive
     description: flutter
@@ -486,20 +479,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
-  responsive_context:
-    dependency: transitive
-    description:
-      name: responsive_context
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.2"
-  responsive_table:
-    dependency: "direct main"
-    description:
-      name: responsive_table
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.1+8"
   shared_preferences:
     dependency: "direct main"
     description:

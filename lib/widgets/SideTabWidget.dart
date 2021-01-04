@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:timelines/timelines.dart';
 
@@ -28,7 +29,7 @@ class SideTabWidget extends StatelessWidget {
         ),
         SizedBox(height: mobile ? 30 : 0),
         SizedBox(
-          height: 360,
+          height: 380,
           child: DefaultTabController(
             length: 2,
             child: ClipRRect(
@@ -69,12 +70,12 @@ class SideTabWidget extends StatelessWidget {
                           TimelineTile(
                             oppositeContents: Padding(
                               padding: const EdgeInsets.all(20.0),
-                              child: Text('Feb 15, 2021'),
+                              child: SelectableText('Feb 15, 2021'),
                             ),
                             contents: Card(
                               child: Container(
                                 padding: EdgeInsets.all(8.0),
-                                child: Text('Submission Ends'),
+                                child: SelectableText('Submission Ends'),
                               ),
                             ),
                             node: TimelineNode(
@@ -83,19 +84,19 @@ class SideTabWidget extends StatelessWidget {
                                 size: 30,
                               ),
                               endConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                             ),
                           ),
                           TimelineTile(
                             oppositeContents: Padding(
                               padding: const EdgeInsets.all(20.0),
-                              child: Text('Feb 28, 2021'),
+                              child: SelectableText('Feb 28, 2021'),
                             ),
                             contents: Card(
                               child: Container(
                                 padding: EdgeInsets.all(8.0),
-                                child: Text('Acceptance Notification'),
+                                child: SelectableText('Acceptance Notification'),
                               ),
                             ),
                             node: TimelineNode(
@@ -104,46 +105,46 @@ class SideTabWidget extends StatelessWidget {
                                 size: 30,
                               ),
                               startConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                               endConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                             ),
                           ),
                           TimelineTile(
                             oppositeContents: Padding(
                               padding: const EdgeInsets.all(20.0),
-                              child: Text('Mar 05, 2021'),
+                              child: SelectableText('Mar 05, 2021'),
                             ),
                             contents: Card(
                               child: Container(
                                 padding: EdgeInsets.all(8.0),
-                                child: Text('Camera ready paper submission'),
+                                child: SelectableText('Camera ready paper submission'),
                               ),
                             ),
                             node: TimelineNode(
                               indicator: Icon(
-                                MdiIcons.cameraEnhanceOutline,
+                                MdiIcons.cameraOutline,
                                 size: 30,
                               ),
                               startConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                               endConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                             ),
                           ),
                           TimelineTile(
                             oppositeContents: Padding(
                               padding: const EdgeInsets.all(20.0),
-                              child: Text('Mar 05, 2021'),
+                              child: SelectableText('Mar 05, 2021'),
                             ),
                             contents: Card(
                               child: Container(
                                 padding: EdgeInsets.all(8.0),
-                                child: Text('Registration'),
+                                child: SelectableText('Registration'),
                               ),
                             ),
                             node: TimelineNode(
@@ -152,22 +153,22 @@ class SideTabWidget extends StatelessWidget {
                                 size: 30,
                               ),
                               startConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                               endConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                             ),
                           ),
                           TimelineTile(
                             oppositeContents: Padding(
                               padding: const EdgeInsets.all(20.0),
-                              child: Text('Mar 18-19, 2021'),
+                              child: SelectableText('Mar 18-19, 2021'),
                             ),
                             contents: Card(
                               child: Container(
                                 padding: EdgeInsets.all(8.0),
-                                child: Text('Conference'),
+                                child: SelectableText('Conference'),
                               ),
                             ),
                             node: TimelineNode(
@@ -176,7 +177,7 @@ class SideTabWidget extends StatelessWidget {
                                 size: 30,
                               ),
                               startConnector: SolidLineConnector(
-                                color: Colors.green,
+                                color: HexColor("#ff309071"),
                               ),
                             ),
                           ),
@@ -190,11 +191,11 @@ class SideTabWidget extends StatelessWidget {
                             Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
-                                title: Text(
+                                title: SelectableText(
                                   "Title",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
-                                trailing: Text(
+                                trailing: SelectableText(
                                   "Date",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
@@ -202,11 +203,11 @@ class SideTabWidget extends StatelessWidget {
                             ),Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
-                                title: Text(
-                                  "Text",
+                                title: SelectableText(
+                                  "SelectableText",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
-                                trailing: Text(
+                                trailing: SelectableText(
                                   "Date",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
@@ -214,11 +215,11 @@ class SideTabWidget extends StatelessWidget {
                             ),Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
-                                title: Text(
-                                  "Text",
+                                title: SelectableText(
+                                  "SelectableText",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
-                                trailing: Text(
+                                trailing: SelectableText(
                                   "Date",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
@@ -226,11 +227,11 @@ class SideTabWidget extends StatelessWidget {
                             ),Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
-                                title: Text(
-                                  "Text",
+                                title: SelectableText(
+                                  "SelectableText",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
-                                trailing: Text(
+                                trailing: SelectableText(
                                   "Date",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
@@ -238,11 +239,11 @@ class SideTabWidget extends StatelessWidget {
                             ), Card(
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
-                                title: Text(
-                                  "Text",
+                                title: SelectableText(
+                                  "SelectableText",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),
-                                trailing: Text(
+                                trailing: SelectableText(
                                   "Date",
                                   style: Theme.of(context).textTheme.bodyText1,
                                 ),

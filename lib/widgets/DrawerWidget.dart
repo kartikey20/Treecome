@@ -11,34 +11,84 @@ class MyDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: [
-          DrawerHeader(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Row(
               children: [
-                Icon(MdiIcons.palmTree),
-                Text("Treecome"),
+                IconButton(
+                    icon: Icon(MdiIcons.windowClose),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    }),
+                SizedBox(
+                  width: 10,
+                ),
+                Row(
+                  children: [
+                    Icon(MdiIcons.palmTree,size: 50,),
+                    Text(
+                      'Treecome 2021',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
-          ListTile(
-            title: Home(),
-            onTap: () {},
+          Divider(
+            height: 1,
+            thickness: 1,
           ),
           ListTile(
-            title: Committee(),
-            onTap: () {},
+            title: Text('Home'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              )
+            },
           ),
           ListTile(
-            title: CallForPapers(),
-            onTap: () {},
+            title: Text('Committee'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Committee()),
+              )
+            },
           ),
           ListTile(
-            title: Registration(),
-            onTap: () {},
+            title: Text('Call for Papers'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CallForPapers()),
+              )
+            },
           ),
           ListTile(
-            title: ContactUs(),
-            onTap: () {},
+            title: Text('Registration'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Registration()),
+              )
+            },
+          ),
+          ListTile(
+            title: Text('Contact Us'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ContactUs()),
+              )
+            },
+          ),
+          Divider(
+            height: 1,
+            thickness: 1,
           ),
         ],
       ),
