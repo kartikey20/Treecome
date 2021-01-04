@@ -288,6 +288,12 @@ List technical = [
     "location": "Cranfields University, UK"
   }
 ];
+List patron = [
+  {"name" :"Prof. M P S Chauhan ",
+    "designation": "Professor",
+    "location": "GBPIET Pauri India"
+  }
+];
 List track1 = [];
 List track2 = [];
 List track3 = [];
