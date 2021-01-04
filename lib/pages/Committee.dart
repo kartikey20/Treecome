@@ -54,9 +54,9 @@ class Committee extends StatelessWidget {
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       children: [
-                        CommitteeList("general", general),
+                        CommitteeList("General", general),
                         CommitteeList("Conference", conference),
-                        CommitteeList("technical", technical),
+                        CommitteeList("Technical", technical),
                         CommitteeList("Finance", finance),
                         CommitteeList("Organizing Secretaries", organizing)
                       ],

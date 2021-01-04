@@ -9,6 +9,8 @@ class ContactUsForm extends StatelessWidget {
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
       children: [
+        Text("For further information, please contact",
+            style: Theme.of(context).textTheme.bodyText1),
         Card(
           child: ListTile(
             title: Center(
