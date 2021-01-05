@@ -31,6 +31,7 @@ class Home extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 AboutConference(style),
+                SizedBox(height: 30,),
                 SideTabWidget(),
                 JournalPublicationsWidget(style),
                 ProceedingPublicationsWidget(style)
