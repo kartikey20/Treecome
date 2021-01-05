@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:treecome/Data/data.dart';
 
 class CommitteeList extends StatelessWidget {
@@ -9,51 +10,55 @@ class CommitteeList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return SingleChildScrollView(
       scrollDirection: Axis.vertical,
-      shrinkWrap: true,
-     children: [
-        Center(
-          child: Text(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SelectableText(
             title,
-            style: Theme.of(context).textTheme.headline1,
+            style: TextStyle(fontSize: 30,color: HexColor("#696E83"),height: 2),
           ),
-        ),
-        ListView.builder(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
-          itemCount: list.length,
-          itemBuilder: (context, index) {
-            return Card(
-              clipBehavior: Clip.antiAlias,
-              child: ListTile(
-                contentPadding: EdgeInsets.all(10.0),
-                title: Center(
-                  child: Text(
-                    list[index]["name"],
-                    style: TextStyle(fontSize: 18, color: Colors.black,height: 2),
+          ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            itemCount: list.length,
+            itemBuilder: (context, index) {
+              return Card(
+                clipBehavior: Clip.antiAlias,
+                child: ListTile(
+                  contentPadding: EdgeInsets.all(10.0),
+                  title: Center(
+                    child: SelectableText(
+                      list[index]["name"],
+                      style: TextStyle(
+                          fontSize: 18, color: Colors.black, height: 2),
+                    ),
+                  ),
+                  subtitle: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SelectableText(
+                        list[index]["designation"],
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                      SelectableText(
+                        list[index]["location"],
+                        style: Theme.of(context).textTheme.bodyText1,
+                      )
+                    ],
                   ),
                 ),
-                subtitle: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      list[index]["designation"],
-                      style: Theme.of(context).textTheme.bodyText1,
-                    ),
-                    Text(
-                      list[index]["location"],
-                      style: Theme.of(context).textTheme.bodyText1,
-                    )
-                  ],
-                ),
-              ),
-            );
-          },
-        ),
-      ],
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

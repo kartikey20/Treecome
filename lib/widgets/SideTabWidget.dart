@@ -31,7 +31,6 @@ class SideTabWidget extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: mobile ? 30 : 0),
         SizedBox(
           height: 360,
           child: DefaultTabController(

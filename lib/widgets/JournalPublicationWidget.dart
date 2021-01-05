@@ -5,6 +5,10 @@ import 'package:treecome/Data/data.dart';
 import 'package:treecome/widgets/ImageWidget.dart';
 
 class JournalPublicationsWidget extends StatelessWidget {
+  TextStyle style;
+
+  JournalPublicationsWidget(this.style);
+
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
@@ -12,17 +16,22 @@ class JournalPublicationsWidget extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         children: [
-          Text("Journal Publication",
-              style: Theme.of(context).textTheme.headline1),
-          Text(Journaltext, style: Theme.of(context).textTheme.bodyText1),
-          ListView(padding: EdgeInsets.all(30),
-        shrinkWrap: true,
+          SelectableText("Journal Publication", style: style),
+          SelectableText(Journaltext,
+              style: Theme.of(context).textTheme.bodyText1),
+          ListView(
+            padding: EdgeInsets.all(30),
+            shrinkWrap: true,
             scrollDirection: Axis.vertical,
             children: [
               ImageWidget(),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               ImageWidget(),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               ImageWidget(),
             ],
           )
@@ -32,9 +41,9 @@ class JournalPublicationsWidget extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         children: [
-          Text("Journal Publication",
-              style: Theme.of(context).textTheme.headline1),
-          Text(Journaltext, style: Theme.of(context).textTheme.bodyText1),
+          SelectableText("Journal Publication", style: style),
+          SelectableText(Journaltext,
+              style: Theme.of(context).textTheme.bodyText1),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,

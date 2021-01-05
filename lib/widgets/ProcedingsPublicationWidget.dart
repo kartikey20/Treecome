@@ -6,6 +6,8 @@ import 'package:treecome/Data/data.dart';
 import 'ImageWidget.dart';
 
 class ProceedingPublicationsWidget extends StatelessWidget {
+  TextStyle style;
+  ProceedingPublicationsWidget(this.style);
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
@@ -13,9 +15,10 @@ class ProceedingPublicationsWidget extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         children: [
-          Text("Proceedings Publication",
-              style: Theme.of(context).textTheme.headline1),
-          Text(Proceedingtext, style: Theme.of(context).textTheme.bodyText1),
+          SelectableText("Proceedings Publication",
+              style: style),
+          SelectableText(Proceedingtext,
+              style: Theme.of(context).textTheme.bodyText1),
           Padding(
             padding: const EdgeInsets.all(30),
             child: ListView(
@@ -23,7 +26,9 @@ class ProceedingPublicationsWidget extends StatelessWidget {
               shrinkWrap: true,
               children: [
                 ImageWidget(),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 ImageWidget(),
               ],
             ),
@@ -34,9 +39,10 @@ class ProceedingPublicationsWidget extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         children: [
-          Text("Proceeding Publication",
-              style: Theme.of(context).textTheme.headline1),
-          Text(Journaltext, style: Theme.of(context).textTheme.bodyText1),
+          SelectableText("Proceeding Publication",
+              style: style),
+          SelectableText(Journaltext,
+              style: Theme.of(context).textTheme.bodyText1),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,

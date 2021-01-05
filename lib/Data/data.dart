@@ -1,6 +1,7 @@
 import 'dart:core';
 
-String callForPapers = "Prospective authors are invited to submit original manuscripts (unpublished/not communicated/not under review of any   other conference or journal) of their research work on recent developments in the topics related to the conference. It is  required that the manuscript follows the standard camera-ready format for which the template is provided on the conference website. All submitted papers will be peer reviewed and evaluated based on originality, technical strength, scientific contribution, relevance to conference theme, and readability. Acceptance notification of papers will be communicated to authors by email. The authors of the accepted papers will be allowed to make corrections in accordance with the suggestions and comments of the reviewers and final camera-ready papers must be submitted within the final submission deadline. ";
+String callForPapers =
+    "Prospective authors are invited to submit original manuscripts (unpublished/not communicated/not under review of any   other conference or journal) of their research work on recent developments in the topics related to the conference. It is  required that the manuscript follows the standard camera-ready format for which the template is provided on the conference website. All submitted papers will be peer reviewed and evaluated based on originality, technical strength, scientific contribution, relevance to conference theme, and readability. Acceptance notification of papers will be communicated to authors by email. The authors of the accepted papers will be allowed to make corrections in accordance with the suggestions and comments of the reviewers and final camera-ready papers must be submitted within the final submission deadline. ";
 List advisory = [
   {
     "name": "Dr. Rajkumar Buyya",
@@ -102,7 +103,6 @@ List advisory = [
     "designation": "Professor",
     "location": "IIT Bangladesh"
   },
-
 ];
 List conference = [
   {
@@ -289,14 +289,156 @@ List technical = [
     "location": "Cranfields University, UK"
   }
 ];
+List technicalprogram = [
+  {
+    "name": "Dr. Aboul Ella Hassanien Ali",
+    "designation": "Professor",
+    "location": "Cairo University"
+  },
+  {
+    "name": "Dr. Aboul Ella Hassanien Ali",
+    "designation": "Professor",
+    "location": "Cairo University, Egypt"
+  },
+  {
+    "name": "Dr. Sabidur Rahman",
+    "designation": "Professor",
+    "location": "University of California Davis, US"
+  },
+  {
+    "name": "Dr. Priyan M.K. ",
+    "designation": "Research Fellow",
+    "location": "Middlesex University"
+  },
+  {
+    "name": "Dr. Ashraf Darwish",
+    "designation": "Professor",
+    "location": "Helwan University"
+  },
+  {
+    "name": "Dr. Rajeev Srivastava",
+    "designation": "Professor",
+    "location": "IIT BHU"
+  },
+  {
+    "name": "Dr. Aparajita Ojha",
+    "designation": "Professor",
+    "location": "IIIT Jabalpur"
+  },
+  {
+    "name": "Dr. Kondekar Pravin N.",
+    "designation": "Professor",
+    "location": "IIIT Jabalpur"
+  },
+  {
+    "name": "Dr. Dinesh Prasad",
+    "designation": "Professor",
+    "location": "Jamia Milia Islamia University Delhi"
+  },
+  {
+    "name": "Dr. Neeta Pandey",
+    "designation": "Professor",
+    "location": "Delhi Technical University"
+  },
+  {
+    "name": "Dr. M.K. Meshram",
+    "designation": "Associate Professor",
+    "location": "IIT BHU"
+  },
+  {
+    "name": "Dr. Dharmendra Upadhyay",
+    "designation": "Associate Professor",
+    "location": "IIT BHU"
+  },
+  {
+    "name": "Dr. Ajeet Kaushik",
+    "designation": "Assistant Professor",
+    "location": "Florida Polytechnic University"
+  },
+  {
+    "name": "Dr. N.S. Rajput",
+    "designation": "Associate Professor",
+    "location": "IIT BHU"
+  },
+  {
+    "name": "Dr. Bhaskar Biwas",
+    "designation": "Assistant Professor",
+    "location": "MNIT Jaipur"
+  },
+  {
+    "name": "Dr. S.J. Nanda",
+    "designation": "Associate Professor",
+    "location": "IIT BHU"
+  },
+  {
+    "name": "Dr. Nishant Kumar",
+    "designation": "Associate Professor",
+    "location": "NUS Singapore"
+  },
+  {
+    "name": "Mr. Somsingh Rathore",
+    "designation": "Associate Professor",
+    "location": "DRDO Bangalore"
+  },
+  {
+    "name": "Mr. P.C. Chaudhary",
+    "designation": "",
+    "location": "Intel Bangalore"
+  },
+  {
+    "name": "Dr. Anand Kumar Kaushik",
+    "designation": "",
+    "location": "IISRO Trivandrum"
+  },
+  {
+    "name": "Dr. Sumit Kumar",
+    "designation": "Professor",
+    "location": "ABESEC Ghaziabad"
+  },
+  {
+    "name": "Dr. Yudhisthir Pandey",
+    "designation": "Assistant Professor",
+    "location": "Rajkiya Engineering College, Ambedkar Nagar"
+  },
+  {
+    "name": "Dr. S.R Pattanaik",
+    "designation": "Professor",
+    "location": "NIST Berhampur"
+  },
+  {
+    "name": "Dr. Hemant Ahuja",
+    "designation": "Professor",
+    "location": "ABESEC Ghaziabad"
+  },
+  {
+    "name": "Dr. Usha Chauhan",
+    "designation": "Associate Professor",
+    "location": "Galgotia University Greater Noida"
+  },
+  {
+    "name": "Dr. Varun Bajaj",
+    "designation": "Assistant Professor",
+    "location": "IIIT Jabalpur"
+  },
+  {
+    "name": "Dr. Sanjeev Patel",
+    "designation": "Assistant Professor",
+    "location": "JIIT Noida"
+  },
+  {
+    "name": "Dr. R.L Yadava",
+    "designation": "Professor",
+    "location": "GCET Greater Noida"
+  },
+];
 List patron = [
-  {"name": "Prof. M P S Chauhan ",
+  {
+    "name": "Prof. M P S Chauhan ",
     "designation": "Professor",
     "location": "GBPIET Pauri India"
   }
 ];
-List track1 = [];
-List track2 = [];
-List track3 = [];
+List Tracks = ["power", "dffd", "dsfds"];
+
 String Journaltext = "Updating soon";
 String Proceedingtext = "Updating soon";

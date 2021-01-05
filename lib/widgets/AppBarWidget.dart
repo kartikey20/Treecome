@@ -7,7 +7,6 @@ import 'package:treecome/pages/Committee.dart';
 import 'package:treecome/pages/ContactUs.dart';
 import 'package:treecome/pages/Home.dart';
 import 'package:treecome/pages/Registration.dart';
-import 'package:treecome/widgets/DrawerWidget.dart';
 
 Widget myAppBarWidget(BuildContext context, String title) {
   return PreferredSize(
@@ -24,10 +23,16 @@ Widget myAppBarWidget(BuildContext context, String title) {
         title: Text(title),
       ),
       desktop: AppBar(
-        leading: Icon(MdiIcons.palmTree),
+        leading: Icon(
+          MdiIcons.palmTree,
+          size: 40,
+        ),
         title: Row(
           children: [
-            Text("Treecome"),
+            Text(
+              "Treecome",
+              style: TextStyle(fontSize: 25),
+            ),
           ],
         ),
         elevation: 0,
@@ -36,46 +41,76 @@ Widget myAppBarWidget(BuildContext context, String title) {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Home()),
+                MaterialPageRoute(
+                  builder: (context) =>
+                      Home(Theme.of(context).textTheme.headline1),
+                ),
               );
             },
-            child: Text("Home"),
+            child: Text(
+              "Home",
+              style: TextStyle(fontSize: 16),
+            ),
           ),
           FlatButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Committee()),
+                MaterialPageRoute(
+                  builder: (context) =>
+                      Committee(Theme.of(context).textTheme.headline1),
+                ),
               );
             },
-            child: Text("Committee"),
+            child: Text(
+              "Committee",
+              style: TextStyle(fontSize: 16),
+            ),
           ),
           FlatButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CallForPapers()),
+                MaterialPageRoute(
+                  builder: (context) =>
+                      CallForPapers(Theme.of(context).textTheme.headline1),
+                ),
               );
             },
-            child: Text("Call for Papers"),
+            child: Text(
+              "Call for Papers",
+              style: TextStyle(fontSize: 16),
+            ),
           ),
           FlatButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Registration()),
+                MaterialPageRoute(
+                  builder: (context) =>
+                      Registration(Theme.of(context).textTheme.headline1),
+                ),
               );
             },
-            child: Text("Registration"),
+            child: Text(
+              "Registration",
+              style: TextStyle(fontSize: 16),
+            ),
           ),
           FlatButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ContactUs()),
+                MaterialPageRoute(
+                  builder: (context) =>
+                      ContactUs(Theme.of(context).textTheme.headline1),
+                ),
               );
             },
-            child: Text("Contact Us"),
+            child: Text(
+              "Contact Us",
+              style: TextStyle(fontSize: 16),
+            ),
           ),
         ],
       ),

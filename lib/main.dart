@@ -4,6 +4,7 @@ import 'package:flutter/rendering.dart';
 import 'package:animations/animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/pages/Committee.dart';
 import 'package:treecome/pages/Home.dart';
 
@@ -58,11 +59,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Treecome 2021',
       theme: ThemeData(
-        buttonTheme: ButtonThemeData(padding: EdgeInsets.fromLTRB(30,0,30,0),
+        buttonTheme: ButtonThemeData(
+          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
           buttonColor: Colors.white,
           textTheme: ButtonTextTheme.accent,
           colorScheme:
-          Theme.of(context).colorScheme.copyWith(secondary: Colors.white),
+              Theme.of(context).colorScheme.copyWith(secondary: Colors.white),
         ),
         pageTransitionsTheme: PageTransitionsTheme(
           builders: {
@@ -77,10 +79,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: primaryGreen,
         textTheme: GoogleFonts.robotoTextTheme(
           Theme.of(context).textTheme.copyWith(
-                headline1: TextStyle(
-                    fontSize: 40,
-                    color: Colors.black,
-                    height: 2),
+                headline1:
+                    TextStyle(fontSize: 40, color: Colors.black, height: 2),
+                headline3:
+                    TextStyle(fontSize: 30, color: Colors.black, height: 2),
                 bodyText1: TextStyle(
                   fontSize: 16.0,
                   height: 2,
@@ -89,7 +91,17 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: Home(),
+      home: Treecome(),
+    );
+  }
+}
+
+class Treecome extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ScreenTypeLayout(
+      mobile: Home(Theme.of(context).textTheme.headline3),
+      desktop: Home(Theme.of(context).textTheme.headline1),
     );
   }
 }

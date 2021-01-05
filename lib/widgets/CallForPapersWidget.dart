@@ -4,7 +4,6 @@ import 'package:hexcolor/hexcolor.dart';
 class CallForPapersWidget extends StatelessWidget {
   var title;
   List list;
-
   CallForPapersWidget(this.title, this.list);
 
   @override
