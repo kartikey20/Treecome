@@ -6,7 +6,7 @@ import 'package:treecome/pages/CallForPapers.dart';
 import 'package:treecome/pages/Committee.dart';
 import 'package:treecome/pages/ContactUs.dart';
 import 'package:treecome/pages/Home.dart';
-import 'package:treecome/pages/Registration.dart';
+import 'package:treecome/pages/registration.dart';
 
 Widget myAppBarWidget(BuildContext context, String title) {
   return PreferredSize(
