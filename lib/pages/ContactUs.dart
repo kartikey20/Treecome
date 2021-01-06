@@ -52,9 +52,9 @@ class ContactUs extends StatelessWidget {
                       height: 30,
                     ),
                     ContactUsCard("Mr. Puskhar Praveen", "puskhar@treecome.in",
-                        "8448071122"),
+                        ""),
                     ContactUsCard(
-                        "Dr. Bhola Jha", "bholajha@treecome.in", "8448071122"),
+                        "Dr. Bhola Jha", "bholajha@treecome.in", ""),
                   ],
                 )
               ],
@@ -114,9 +114,9 @@ class ContactUs extends StatelessWidget {
                               height: 50,
                             ),
                             ContactUsCard("Mr. Puskhar Praveen",
-                                "puskhar@treecome.in", "8448071122"),
+                                "puskhar@treecome.in", ""),
                             ContactUsCard("Dr. Bhola Jha",
-                                "bholajha@treecome.in", "8448071122"),
+                                "bholajha@treecome.in", ""),
                           ],
                         ),
                       ),
