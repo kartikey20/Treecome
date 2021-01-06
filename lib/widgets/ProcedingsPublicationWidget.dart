@@ -7,40 +7,35 @@ import 'ImageWidget.dart';
 
 class ProceedingPublicationsWidget extends StatelessWidget {
   TextStyle style;
+
   ProceedingPublicationsWidget(this.style);
+
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: ListView(
-        shrinkWrap: true,
+      mobile: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        children: [
-          SelectableText("Proceedings Publication",
-              style: style),
-          SelectableText(Proceedingtext,
-              style: Theme.of(context).textTheme.bodyText1),
-          Padding(
-            padding: const EdgeInsets.all(30),
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              children: [
-                ImageWidget(),
-                SizedBox(
-                  height: 20,
-                ),
-                ImageWidget(),
-              ],
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SelectableText("Proceedings Publication", style: style),
+            SelectableText(Proceedingtext,
+                style: Theme.of(context).textTheme.bodyText1),
+            ImageWidget(),
+            SizedBox(
+              height: 20,
             ),
-          )
-        ],
+            ImageWidget(),
+          ],
+        ),
       ),
       desktop: ListView(
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         children: [
-          SelectableText("Proceeding Publication",
-              style: style),
+          SelectableText("Proceeding Publication", style: style),
           SelectableText(Journaltext,
               style: Theme.of(context).textTheme.bodyText1),
           Row(

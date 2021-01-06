@@ -19,9 +19,11 @@ class CommitteeList extends StatelessWidget {
         children: [
           SelectableText(
             title,
-            style: TextStyle(fontSize: 30,color: HexColor("#696E83"),height: 2),
+            style:
+                TextStyle(fontSize: 30, color: HexColor("#696E83"), height: 2),
           ),
           ListView.builder(
+            addAutomaticKeepAlives: true,
             physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
             shrinkWrap: true,

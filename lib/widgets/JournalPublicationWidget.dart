@@ -12,30 +12,27 @@ class JournalPublicationsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: ListView(
-        shrinkWrap: true,
+      mobile: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        children: [
-          SelectableText("Journal Publication", style: style),
-          SelectableText(Journaltext,
-              style: Theme.of(context).textTheme.bodyText1),
-          ListView(
-            padding: EdgeInsets.all(30),
-            shrinkWrap: true,
-            scrollDirection: Axis.vertical,
-            children: [
-              ImageWidget(),
-              SizedBox(
-                height: 20,
-              ),
-              ImageWidget(),
-              SizedBox(
-                height: 20,
-              ),
-              ImageWidget(),
-            ],
-          )
-        ],
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SelectableText("Journal Publication", style: style),
+            SelectableText(Journaltext,
+                style: Theme.of(context).textTheme.bodyText1),
+            ImageWidget(),
+            SizedBox(
+              height: 20,
+            ),
+            ImageWidget(),
+            SizedBox(
+              height: 20,
+            ),
+            ImageWidget(),
+          ],
+        ),
       ),
       desktop: ListView(
         shrinkWrap: true,
