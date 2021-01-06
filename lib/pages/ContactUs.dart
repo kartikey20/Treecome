@@ -4,6 +4,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/widgets/AppBarWidget.dart';
 import 'package:treecome/widgets/ContactUsCard.dart';
 import 'package:treecome/widgets/ContactUsForm.dart';
+import 'package:treecome/widgets/Footer.dart';
 
 class ContactUs extends StatelessWidget {
   TextStyle style;
@@ -127,6 +128,7 @@ class ContactUs extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Footer(),
     );
   }
 }

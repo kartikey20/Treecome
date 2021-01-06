@@ -4,6 +4,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:treecome/Data/data.dart';
 import 'package:treecome/widgets/AppBarWidget.dart';
 import 'package:treecome/widgets/CommitteeList.dart';
+import 'package:treecome/widgets/Footer.dart';
 
 class Committee extends StatelessWidget {
   TextStyle style;
@@ -103,6 +104,7 @@ class Committee extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Footer(),
     );
   }
 }

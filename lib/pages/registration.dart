@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:treecome/widgets/AppBarWidget.dart';
+import 'package:treecome/widgets/Footer.dart';
 
 class Registration extends StatelessWidget {
   TextStyle style;
@@ -391,6 +392,7 @@ class Registration extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: Footer(),
     );
   }
 }
