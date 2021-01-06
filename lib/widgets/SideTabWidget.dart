@@ -3,10 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:timelines/timelines.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SideTabWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    _launchURL() async {
+      const url = 'https://easychair.org/conferences/?conf=treecome2021';
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
     bool mobile = MediaQuery.of(context).size.width <= 600;
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -24,7 +33,7 @@ class SideTabWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(30.0),
           ),
           child: RaisedButton(
-            onPressed: () {},
+            onPressed: _launchURL,
             child: Text(
               "Submit Paper",
               style: TextStyle(fontSize: 16, color: Colors.white),
