@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class ImageWidget extends StatelessWidget {
   @override
@@ -7,9 +8,10 @@ class ImageWidget extends StatelessWidget {
       borderRadius: BorderRadius.circular(20.0),
       child: Card(
         clipBehavior: Clip.antiAlias,
-        child: Image(
+        child: FadeInImage.memoryNetwork(
+          placeholder: kTransparentImage,
           fit: BoxFit.fill,
-          image: NetworkImage("https://dummyimage.com/250"),
+          image: 'https://dummyimage.com/250',
         ),
       ),
     );
