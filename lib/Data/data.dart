@@ -111,15 +111,16 @@ List conference = [
     "location": "GBPIET Pauri India"
   },
   {
-    "name": "Prof. Sanjay Gairola",
-    "designation": "Professor",
-    "location": "University of Bisha, Saudi Arabia"
-  },
-  {
     "name": "Prof. A K Gautam",
     "designation": "Professor",
     "location": "GBPIET Pauri India"
-  }
+  },
+  {
+    "name": "Prof. Sanjay Gairola",
+    "designation": "Professor",
+    "location": "GBPIET Pauri India"
+  },
+
 ];
 List finance = [
   {
@@ -271,17 +272,17 @@ List technical = [
   {
     "name": "Prof. B K Kanaujia",
     "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "location": "JNU, New Delhi"
   },
   {
     "name": "Prof. M K Panda",
     "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "location": "GBPIET Pauri India"
   },
   {
     "name": "Prof. Rajesh Kumar",
     "designation": "Professor",
-    "location": "ECED, GBPIET Pauri India"
+    "location": "GBPIET Pauri India"
   },
   {
     "name": "Dr. M. Srinivasan",

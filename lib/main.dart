@@ -1,12 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:animations/animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:treecome/pages/Committee.dart';
 import 'package:treecome/pages/Home.dart';
 
 void main() {
