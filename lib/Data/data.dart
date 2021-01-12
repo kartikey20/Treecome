@@ -203,17 +203,7 @@ List organizing = [
     "location": "GBPIET, Pauri Garhwal"
   },
   {
-    "name": "Dr. Rajkumar Buyya",
-    "designation": "Assistant Professor",
-    "location": "GBPIET, Pauri Garhwal"
-  },
-  {
     "name": "Mr. Manoj Kumar",
-    "designation": "Assistant Professor",
-    "location": "GBPIET, Pauri Garhwal"
-  },
-  {
-    "name": "Dr. Rajkumar Buyya",
     "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
@@ -238,11 +228,6 @@ List organizing = [
     "location": "GBPIET, Pauri Garhwal"
   },
   {
-    "name": "Mr. Sandeep Rana ",
-    "designation": "Assistant Professor",
-    "location": "GBPIET, Pauri Garhwal"
-  },
-  {
     "name": "Mr. Pushkar Praveen ",
     "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
@@ -259,6 +244,11 @@ List organizing = [
   },
   {
     "name": "Mr. Abhilekh Barthwal",
+    "designation": "Assistant Professor",
+    "location": "GBPIET, Pauri Garhwal"
+  },
+  {
+    "name": "Mr. Sandeep Rana ",
     "designation": "Assistant Professor",
     "location": "GBPIET, Pauri Garhwal"
   },
