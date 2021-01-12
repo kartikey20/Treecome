@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:treecome/Data/data.dart';
 
 class CallForPapersWidget extends StatelessWidget {
-  var title;
-  List list;
-  CallForPapersWidget(this.title, this.list);
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +12,15 @@ class CallForPapersWidget extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         children: [
-          Container(
-            height: 56,
-            color: HexColor("#ff309071"),
-            child: Text(title),
-          ),
           ListView.builder(
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
-            itemCount: list.length,
+            itemCount: Tracks.length,
             itemBuilder: (BuildContext context, int index) {
               return Card(
                 clipBehavior: Clip.antiAlias,
                 child: ListTile(
-                  title: Text(list[index]["title"]),
+                  title: Text(Tracks[index]),
                 ),
               );
             },

@@ -24,21 +24,6 @@ class ContactUs extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
-                  child: Column(
-                    children: [
-                      Text(
-                        "Drop us a message",
-                        style: style,
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      ContactUsForm(),
-                    ],
-                  ),
-                ),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -75,28 +60,10 @@ class ContactUs extends StatelessWidget {
                   style: style,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
-                        flex: 1,
-                        child: Column(
-                          children: [
-                            Text(
-                              "Drop us a message",
-                              style: style,
-                            ),
-                            SizedBox(
-                              height: 50,
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(100, 0, 100, 0),
-                              child: ContactUsForm(),
-                            ),
-                          ],
-                        )),
                     Expanded(
                       flex: 1,
                       child: Padding(

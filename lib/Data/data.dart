@@ -120,7 +120,6 @@ List conference = [
     "designation": "Professor",
     "location": "GBPIET Pauri India"
   },
-
 ];
 List finance = [
   {
@@ -429,7 +428,16 @@ List patron = [
     "location": "GBPIET Pauri India"
   }
 ];
-List Tracks = ["power", "dffd", "dsfds"];
+List Tracks = [
+  "Power Electronics and Drives",
+  "Renewable energy",
+  "Instrumentation and Control",
+  "Power Systems",
+  "Solid state devices and VSLI and Electronics Circuits",
+  "Antenna, Microwave and Communication",
+  "Signal and Image Processing",
+  "Artificial Intelligence, Machine Learning and IoT Embedded etc"
+];
 
 String Journaltext = "Updating soon";
 String Proceedingtext = "Updating soon";
